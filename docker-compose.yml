@@ -1,0 +1,33 @@
+version: '3'
+services: 
+  tex:
+    image: iwng/tex:latest
+    container_name: tex
+    tty: true
+    volumes:
+      - ./docs:/root/workdir
+      - ./.latexmkrc:/root/.latexmkrc
+      - ./src:/root/src
+      - ./assets:/root/assets
+  notebook:
+    image: jupyter/datascience-notebook
+    container_name: notebook
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/home/jovyan/data
+  cpp:
+    image: iwng/cpp:boost
+    container_name: cpp
+    tty: true
+    volumes:
+      - ./src:/root/src
+      - ./data:/root/data
+  fortran:
+    image: iwng/fortran:lapack
+    container_name: fortran
+    tty: true
+    volumes:
+      - ./src:/root/src
+      - ./data:/root/data
