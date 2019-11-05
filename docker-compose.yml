@@ -31,3 +31,9 @@ services:
     volumes:
       - ./src:/root/src
       - ./data:/root/data
+  dev:
+    image: iwng/dev:latest
+    container_name: dev
+    tty: true
+    volumes:
+      - ./dev:/root/dev
