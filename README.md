@@ -1,3 +1,3 @@
 # TEMPLATE
 
-@2019 Kazuki IWANAGA
+Copyright (c) 2019 Kazuki IWANAGA
