@@ -1,6 +1,0 @@
-[submodule "myenv"]
-	path = myenv
-	url = https://github.com/Libavius/cmake-fortran-template.git
-[submodule "myenv/pFUnit"]
-	path = myenv/pFUnit
-	url = https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git
