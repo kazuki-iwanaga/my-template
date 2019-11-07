@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 ### options
 option(WARNINGS "ON - display compiler warnings, OFF - do not display compiler warnings" ON)
 option(OPENMP "ON - enables adding of OpenMP targets, OFF - disables adding of OpenMP targets" OFF)
-option(PFUNIT "ON - using pFUnit for unit tests, OFF - skip building unit tests" OFF)
+option(PFUNIT "ON - using pFUnit for unit tests, OFF - skip building unit tests" ON)
 
 # defines project name and used language
 project(FortranTemplate Fortran)
