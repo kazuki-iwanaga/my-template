@@ -1,3 +1,0 @@
-[submodule "myenv/pFUnit"]
-	path = myenv/pFUnit
-	url = https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git
