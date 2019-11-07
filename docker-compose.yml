@@ -1,39 +1,26 @@
 version: '3'
 services: 
   tex:
-    image: iwng/tex:latest
+    build: ./docker/tex
+    image: iwanagak/tex:2019
     container_name: tex
     tty: true
     volumes:
       - ./docs:/root/workdir
       - ./.latexmkrc:/root/.latexmkrc
-      - ./src:/root/src
-      - ./assets:/root/assets
   notebook:
     image: jupyter/datascience-notebook
     container_name: notebook
     ports:
       - 8888:8888
     volumes:
-      - ./notebooks:/home/jovyan/work
+      - ./notebooks:/home/jovyan/notebooks
       - ./data:/home/jovyan/data
-  cpp:
-    image: iwng/cpp:boost
-    container_name: cpp
+  myenv:
+    build: ./docker/myenv
+    image: iwanagak/myenv:2019
+    container_name: myenv
     tty: true
     volumes:
-      - ./src:/root/src
+      - ./myenv:/root/myenv
       - ./data:/root/data
-  fortran:
-    image: iwng/fortran:lapack
-    container_name: fortran
-    tty: true
-    volumes:
-      - ./src:/root/src
-      - ./data:/root/data
-  dev:
-    image: iwng/dev:latest
-    container_name: dev
-    tty: true
-    volumes:
-      - ./dev:/root/dev

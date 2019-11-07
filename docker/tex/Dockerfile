@@ -1,5 +1,6 @@
-FROM iwng/tex:latest
+FROM paperist/alpine-texlive-ja:latest
 
-WORKDIR /root/docs
+RUN tlmgr update --self \
+    && tlmgr install braket
 
 CMD [ "/bin/sh" ]
