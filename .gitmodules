@@ -1,0 +1,3 @@
+[submodule "myenv"]
+	path = myenv
+	url = https://github.com/Libavius/cmake-fortran-template.git
