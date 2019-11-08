@@ -22,5 +22,5 @@ services:
     container_name: myenv
     tty: true
     volumes:
-      - ./myenv:/root/myenv
+      - ./cmake-fortran-template:/root/myenv
       - ./data:/root/data
