@@ -23,4 +23,6 @@ services:
     tty: true
     volumes:
       - ./cmake-fortran-template:/root/myenv
+      - ./src:/root/myenv/src
+      - ./CMakeLists.txt:/root/myenv/CMakeLists.txt
       - ./data:/root/data
