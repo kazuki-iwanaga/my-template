@@ -1,5 +1,5 @@
 version: '3'
-services: 
+services:
   tex:
     build: ./docker/tex
     image: iwanagak/tex:2019
@@ -8,6 +8,7 @@ services:
     volumes:
       - ./docs:/root/workdir
       - ./.latexmkrc:/root/.latexmkrc
+    working_dir: /root/workdir
   notebook:
     image: jupyter/datascience-notebook
     container_name: notebook
